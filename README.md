@@ -17,7 +17,7 @@ docker run -it --platform linux/amd64 --entrypoint /bin/bash -v "$(pwd)":/app 0x
 Sometimes using gcc9 is required, hence the gcc9 option
 ```
 docker buildx create --use --name multi-arch-builder
-docker buildx build --platform=amd64 -t mingw64-deb-gcc9 -f gcc9.Dockerfile
-docker buildx build --platform=amd64 -t mingw64-deb -f Dockerfile
-docker buildx build --platform=amd64 -t mingw64-alpine -f Dockerfile
+docker buildx build --platform=amd64 -t mingw64-deb-gcc9 -f gcc9.Dockerfile .
+docker buildx build --platform=amd64 -t mingw64-deb -f Dockerfile .
+docker buildx build --platform=amd64 -t mingw64-alpine -f Dockerfile .
 ```
